@@ -1,0 +1,95 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #3c3c3c;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Calibri, sans-serif;
+    font-size: 1.95em;
+    color:aliceblue;
+}
+
+main {
+    text-align: center;
+    font-family:Calibri, sans-serif;
+    color:rgb(115, 186, 249);
+    font-size: 18px;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+
+img{
+    border: 5px solid rgb(118, 118, 118);
+    border-radius: 35px;
+    width: 85%;
+  }
+
+figure{
+  background-color:#f8d5c4;
+  color:midnightblue;
+}
+
+.label{
+    text-align: center;
+    font-family: Calibri, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 10px; 
+}
+
+@media screen and (min-width:772px){
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+}
+.grid-container figure:last-child {
+  grid-column: span 2; 
+}
+  img{
+    border-radius: 500px;}
+}
+
+
+@media (min-width:992px){
+  .grid-container figure:nth-child(3n){
+    grid-column: span 2;
+  }
+  img{
+    border-radius:0px;
+  }
+  .grid-container figure:last-child {
+  grid-column: span 1; 
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; 
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  figure {
+    background-color: #333333;
+    color: #f8ffbd;
+  }
+  img{
+    border: 5px solid black;
+  }
+}
